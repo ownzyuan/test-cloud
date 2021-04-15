@@ -1,6 +1,6 @@
 package com.zy.controller;
 
-import com.zy.api.StrApi;
+import com.zy.api.DataApi;
 import com.zy.entity.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,20 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/consumer")
 public class ConsumerController {
 
-//    @Autowired
-//    private DataApi dataApi;
-//
-//    @PostMapping("/insert")
-//    public String insertData(@RequestBody UserDTO userDTO){
-//        return dataApi.insertData(userDTO);
-//    }
-
     @Autowired
-    private StrApi strApi;
+    private DataApi dataApi;
 
-    @PostMapping("/str")
-    public String insertData(){
-        return strApi.returnStr();
+    @PostMapping("/insert")
+    public String insertData(@RequestBody UserDTO userDTO){
+        return dataApi.insertData(userDTO);
     }
 
 }

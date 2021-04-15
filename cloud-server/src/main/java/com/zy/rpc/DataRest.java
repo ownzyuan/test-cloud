@@ -20,7 +20,7 @@ public class DataRest {
     @PostMapping( "/insert")
     public String insertData(@RequestBody UserDTO userDTO){
         userService.insert(userDTO);
-        return "client insert";
+        return "rpc insert";
     }
 
 }

@@ -9,7 +9,6 @@ public class DataFallback implements DataApi {
 
     @Override
     public String insertData(UserDTO userDTO) {
-        System.out.println("-------------");
-        return null;
+        return "api insert";
     }
 }
