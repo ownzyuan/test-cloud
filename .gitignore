@@ -1,0 +1,6 @@
+# Project exclude paths
+/cloud-common/target/
+/cloud-common-base/target/
+/cloud-consumer/target/
+/cloud-eureka-server/target/
+/cloud-server/target/
