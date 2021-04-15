@@ -1,6 +1,6 @@
 package com.zy.controller;
 
-import com.zy.api.StrApi;
+import com.zy.api.StrApi01;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsumerController {
 
     @Autowired
-    private StrApi strApi;
+    private StrApi01 strApi01;
 
     @PostMapping("/str")
-    public String insertData(){
-        return strApi.returnStr();
+    public String returnStr01(){
+        return strApi01.returnStr01();
     }
 
 }

@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/str")
-public class StrRest {
+public class StrRest01 {
 
     @PostMapping("/ret")
-    public String returnStr(){
+    public String returnStr01(){
         return "rpc str";
     }
 

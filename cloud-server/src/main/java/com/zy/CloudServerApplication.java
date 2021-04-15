@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients("com.zy.api")
+//@EnableFeignClients("com.zy.api")
 @MapperScan("com.zy.mapper")
 public class CloudServerApplication {
     public static void main(String[] args) {
