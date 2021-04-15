@@ -9,8 +9,6 @@ eureka:
 spring:
   application:
     name: consumer
-  main:
-    allow-bean-definition-overriding: true
 
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/tktest
@@ -18,9 +16,3 @@ spring:
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-
-feign:
-  htttpclient:
-    enabled: false
-  okhttp:
-    enabled: true

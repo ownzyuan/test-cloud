@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableFeignClients("com.zy.api")
 public class CloudConsumerApplication {
     public static void main(String[] args) {
         SpringApplication.run(CloudConsumerApplication.class, args);
