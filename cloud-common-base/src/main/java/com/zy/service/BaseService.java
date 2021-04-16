@@ -22,12 +22,27 @@ public abstract class BaseService<M extends Mapper<T>, T> implements IBaseServic
         return mapper.selectByPrimaryKey(id);
     }
 
+    @Override
+    public List<T> selectList(T entity) {
+        return mapper.select(entity);
+    }
+
+    @Override
+    public Long selectCount(T entity) {
+        return new Long(mapper.selectCount(entity));
+    }
+
     public List<T> selectAll() {
         return mapper.selectAll();
     }
 
     public void insert(T entity) {
         mapper.insert(entity);
+    }
+
+    @Override
+    public void insertSelective(T entity) {
+        mapper.insertSelective(entity);
     }
 
     public void updateById(T entity) {
