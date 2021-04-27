@@ -8,6 +8,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.CollectionUtils;
+import tk.mybatis.mapper.entity.Example;
+
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = CloudServerApplication.class)
@@ -64,6 +68,18 @@ public class UserMapperTest {
         userDTO.setStatus(1);
         UserDTO result = userMapper.selectOne(userDTO);
         System.out.println(result);
+    }
+
+    @Test
+    public void selectExample() {
+        Example example = new Example(UserDTO.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("name", "inserted");
+        List<UserDTO> userDTOS = userMapper.selectByExample(example);
+        if (CollectionUtils.isEmpty(userDTOS)) {
+            System.out.println("null");
+        }
+        System.out.println(userDTOS.get(0));
     }
 
 }
